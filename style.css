@@ -1,0 +1,19 @@
+body{
+    border: 1px solid #777;
+    width: 800px;
+}
+.smiley{
+    float: left;
+      vertical-align: top;
+  }
+
+.logo{
+    vertical-align: top;
+    float: right;
+    padding: 40px 60px;
+}
+.inputs{
+    clear: both;
+    padding: 20px 5px 20px 5px;
+
+}

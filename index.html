@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Thinkful Madlibs</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+</head>
+<body ng-app="main">
+<header>
+    <div class="smiley">
+        <img src="images/mad-lib-happy-face.png" alt="Mad libs smiley">
+    </div>
+    <div class="logo">
+        <img src="images/ng-mad-libs-logo.png" alt="Angular Logo">
+    </div>
+</header>
+<h2>Please provide the following words:</h2>
+
+<div id="madlibs" ng-controller="MadLibsController as madlibs">
+    <form>
+        <input type="text" ng-model="madlibs.items.malename" placeholder="Male Name"/>
+        <input type="text" ng-model="madlibs.items.jobtitle" placeholder="Job Title"/>
+        <input type="text" ng-model="madlibs.items.tedioustask" placeholder="Tedious Task"/>
+        <input type="text" ng-model="madlibs.items.dirtytask" placeholder="Dirty Task"/>
+        <input type="text" ng-model="madlibs.items.celebrity" placeholder="Celebrity"/>
+        <input type="text" ng-model="madlibs.items.uselessskill" placeholder="Useless Skill"/>
+        <input type="text" ng-model="madlibs.items.obnoxiouscelebrity" placeholder="Obnoxious Celebrity"/>
+        <input type="text" ng-model="adlibs.items.hugenumber" placeholder="A really huge number"/>
+
+    </form>
+    <div>
+        <p><span>{{madlibs.items.malename}}</span> was a <span>{{madlibs.items.jobtitle}}</span> who loved technology.
+            Although he loved parts
+            of
+            his job, he absolutely hated <span>{{madlibs.items.tedioustask}}</span> and <span>{{madlibs.items.dirtytask}}</span>
+            So, <span>{{madlibs.items.malename}}</span>
+            met with his life mentor <span>{{madlibs.items.celebrity}}</span> who told him to learn how to <span>{{madlibs.items.uselessskill}}</span>
+            so he studied programming instead.</p>
+
+        <p>What a great decision! With his new skills, <span>{{madlibs.items.malename}}</span> built a
+            <span>{{madlibs.items.adjective}}</span>
+            robot named <span>{{madlibs.items.obnoxiouscelebrity}}</span> that not only loved <span>{{madlibs.items.dirtytask}}</span>
+            but did it <span>{{madlibs.items.hugenumber}}</span> faster.
+        </p>
+    </div>
+</div>
+
+</body>
+<script src="main.js"></script>
+</html>
